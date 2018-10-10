@@ -1,0 +1,112 @@
+
+<!--  -->
+
+<form action="" method="">
+	<label for="nombre"></label>
+	<input type="text" name="" id="nombre" placeholder="hola">
+	<input type="password" name="">
+	<input type="email" name="">
+	<input type="number" name="">
+	<input type="checkbox" name="">
+
+	<select name="paises">
+		<optgroup label="America" >
+			<option value="Ar">Argentina</option>
+			<option value="pe">Colombia</option>
+			<option value="co">Peru</option>
+		</optgroup>
+		<optgroup label="Europa" >
+			<option value="es">España</option>
+			<option value="it">Italia</option>
+		</optgroup>
+	</select>
+
+	<input type="submit" value="iniciar sesion">
+
+</form>
+	<!----------Fieldset 
+		Es un contendor de inputs----------- -->
+	<fieldset>
+		<legend>Tus datos</legend>
+		<input type="" name="">
+		<input type="" name="">
+	</fieldset>
+
+<!--------------------- -->
+
+<!-- FECHAS -->
+	<form>
+		<input type="date" min="año-mes-dia" max="año-mes-dia">
+		<input type="datetime-local" name="">
+	</form>
+
+<!-- Rangos -->
+	<form>
+		<input type="range" max="valor" min="valor" step="valor-de-cambio">
+	</form>
+
+	<style>
+		/* Manipular estilos */
+		inputRange {
+			-webkit-appearance:none;
+			-moz-appearance: none;
+			appearance:none;
+			/* esto es para que el navegador me deje poner mis estilos */
+			background-color: white; /* Ejemplo */
+		}
+
+		/* cambiar estilos de la ruedita */
+		inputRange::-webkit-slider-thumb {
+			-webkit-appearance:none;
+			-moz-appearance: none;
+			appearance:none;
+		}
+	</style>
+
+	<script>
+		// cambiar  el rango cada 1 segundo
+		/* stepUp : para delante
+		   stepDown: para atras
+		*/
+		setTimeout( () => {
+			rangeElement.stepUp()
+		},1000)
+	</script>
+
+<!-- Atributo Autofocus-->
+	<input autofocus> <!-- para que el campo tenga el foco -->
+
+<!-- Validaciones con expresiones regulares -->
+	<form>
+		<!--  
+		[0-9]{13,16} | Numeros del 0 al 9,entre 13 y 16 digitos
+		HTML 5 PATTERS RECURSO
+		-->
+		<input type="text" pattern="[0-9]">
+	</form>
+
+<!-- Validacion constraint-->
+	<form>
+		<input type="" >
+	</form>
+
+	<script>
+		input.validity // retorna un objeto
+		/* 
+			Valores del objeto | devuelten true o false
+
+		validity.valueMissing | cuando esta el atributo requerid pero sin llenar el campo devuelve true
+		validity.typeMismatch | cuando un campo tiene un valor que no corresponde a su tipo devuelve true
+		validity.patterMismatch | devuelve true cuando se pone un patron que no encaja en el campo
+		validity.tooLong | cuando es demasiado largo devuelve true
+		validity.tooShort | cuando es corto devuelve true
+		validity.rangeUnderflow | retorna verdadero cuando el valor del campo es menor al atributo min
+		validity.rangeOverflow | retorna verdadero cuando el valor del campo es mayor al atributo max
+		validity.stepMismatch | retorna true cuando el valor del atributo setp no es valido
+		validity.badInput | retorna true cuando el navegador considere que no se puede enviar el formulario con el campo actual
+		validity.valid | engloba al resto , si todos los demas validity retornan falso, este devuelve true
+
+
+		*/
+	</script>
+

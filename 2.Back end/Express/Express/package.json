@@ -1,0 +1,14 @@
+{
+  "name": "basico-express",
+  "version": "1.0.0",
+  "description": "conceptos basicos de express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diego",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

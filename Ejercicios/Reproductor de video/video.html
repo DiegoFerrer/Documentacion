@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="video.css">
+</head>
+<body>
+
+	<div class="video-player">
+		<video width="800">
+			<source src="video.mp4">
+		</video>
+		<div class="controls">
+			<div class="top">
+				<div class="volume toggleSlide">
+					<i class="show-volume"></i>
+					<div>
+						<input type="range" id="volume-range" value="1" min="0" max="1" step=".1">						
+					</div>
+				</div>
+				<div class="speed toggleSlide">
+					<i class="show-speed">Velocidad</i>
+					<div>
+						<span class="playBackRate" data-value="1.0">1x</span>
+						<span class="playBackRate" data-value="2.0">2x</span>
+						<span class="playBackRate" data-value="3.0">3x</span>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<i class="play-pause"></i>
+			</div>
+			<div class="bottom">
+				<div class="bar-controls">
+					<span class="current-duration">0:00</span>
+					<span class="pull-right">
+						<i class="set-full-screen">icono FullScreen</i>
+					</span>
+					<span class="pull-right full-duration">0:00</span>
+				</div>
+				<div class="progress">
+					<div class="bar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="video.js"></script>
+</body>
+</html>

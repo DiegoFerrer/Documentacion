@@ -1,0 +1,14 @@
+.custom-list li {
+	list-style-type: none; /* Algunas viñetas por defecto*/
+	position: relative;
+}
+.custom-list li::before {
+	position: absolute;
+	content: '\f00c'; /* Snippet http://astronautweb.co/snippet/font-awesome/*/
+	width: 1em;
+	height: .5em;
+	font-family: FontAwesome;
+	border-radius: 50%;
+	left: -1.3em;
+	top: 0.25em;
+}

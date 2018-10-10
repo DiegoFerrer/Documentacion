@@ -1,0 +1,30 @@
+
+<!--                   Animaciones               -->
+
+<style>
+	animation-name: nombre a elección
+	animation-delay: ej : 0s | esperar para arrancar la animación
+	animation-duration ej 3s | Duración de la animación
+	animation-direction: reverse, alternate, 
+	animation-iteration-count: 1 ,2 ,infinite,etc |cuantas veces va a ejecutarse la animación
+	animation-play-state: running,paused| detener la animación o hacerla correr
+	animation-fill-mode: forwards(se queda como termina) como va a quedar el elemento después de terminar 				   la animación
+	animation-timing-function: ease .linear,etc;
+	animation: name duration y después el resto no importa el orden
+
+	@keyframes | son los fotogramas que definen como se va a mostrar la animacion 
+	se pueden definir con porcentajes o palabras claves
+	@keyframe nameAnimation {
+		from(palabraclave9 {
+		}
+		to {
+		}
+	}
+	@keyframe nameAnimation {
+		0%,10%(talcosa) {
+		}
+		20% 	
+  	}
+
+<style>
+

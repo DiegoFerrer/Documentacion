@@ -1,0 +1,35 @@
+
+<!--  
+	ng-cloak: oculta el contenido hasta que cargue completo todo
+	
+	ng-src: como busca en un json una url,el trabajo de javascript
+	lo implementa a la src natural de html;
+	en cambio si al atributo src comun le pasamos las {{}} con la ruta ,va a andar pero va a tirar error 404.
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+
+<html ng-app='nameModule'>
+  <body ng-controller='nameController'>
+		<ul ng-cloak>
+			<li ng-repeat=" repo in repos">
+				<img ng-src="{{repo.owner.avatar_url}}">
+				<h1>{{repo.name}}</h1>
+			</li>
+		</ul>
+  </body>
+
+</html>
+
+<script>
+
+	angular.module('nameModule',[])
+	.controller('nameController',function($scope,$http){
+		$http.get('https://api.github.com/users/nameUser/repos')
+		 .success(function(data){
+		 	$scope.repos = data;
+		 })
+		 .error(function(error){
+		 	console.log(error)
+		 })
+	})
+</script>

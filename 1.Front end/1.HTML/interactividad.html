@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<!-- Interactividad-->
+
+	<!-- Acordeon-->
+		<details>
+			<summary>HTML</summary>
+			<p>lenguaje ejemplo</p>
+		</details>
+
+	<!-- Modal-->
+		<dialog id='modal'>
+			<h2>Texto de ejemplo</h2>
+		</dialog>
+		<button id="button">abrir</button>
+
+		<script type="text/javascript">
+			const modal =document.getElementById('modal')
+			const button =document.getElementById('button')
+			const close = // elemento
+
+			button.addEventListener('click', () => {
+				modal.setAttibute('open','true')
+			})
+			close.addEventListener('click', () => {
+				modal.removeAttibute('open')
+			})
+		</script>
+</body>
+</html>

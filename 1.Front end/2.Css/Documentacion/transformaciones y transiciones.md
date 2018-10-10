@@ -1,0 +1,28 @@
+
+<!--                   Transformaciones & Transiciones               -->
+
+<style>
+	div {
+		transform:  se transforman según su origen ,por defecto es el centro del elemento;
+			rotate (X=Y), (X,Y) ,  rotateX / Y grados ( estas rotan en 3D) | rotar un elemento
+			translate (X=Y), (X,Y) ,translateX /Y  puede ser en px o % | transladar un elemento 
+			scale (X=Y) , (X,Y) ,scaleX /Y  . Valores enteros | Para scalar el elemento
+			skew (X=Y), (X,Y) skewX / Y en grados| deformar un elemento
+
+	/* EL ORDEN DE LAS TRANSFORMACIONES IMPORTA ! */ 
+		transform-origin : punto de origen del contenedor, por ejemplo bottom left ; o en px
+
+	para hacer aparecer un elemento arriba de otro tipo galería en hover, dalre una opacity 0 
+	y en hover un 1
+
+	transition: propiedad(ejemplo left, pero se recmienda all) duración de transición ,delay, función de tiempo (ease [desacelera al final] , linear siempre tiene la misma velocidad
+	también esta ease-in/out 
+	funcion de tiempo : ease | constante
+						ease-in | empieza lento
+						ease-out | termina lento;
+	transition: transform 3s ease 
+
+	}
+
+<style>
+

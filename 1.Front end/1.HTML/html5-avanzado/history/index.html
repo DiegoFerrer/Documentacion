@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>History API</title>
+</head>
+<body>
+		<h1>Hola mundo</h1>
+	<script>
+		//
+		window.history.forward(); // hacia adelante
+		window.history.go(-2); // recibe un numero positivo o negativo,para ir x veces atras o adelante	
+		window.history.back(); // para ir hacia atras
+		window.history.pushState({curso:"HTML5 Avanzado"},"","/cambiohistoria"); // agrea un estado a la pila de paginas
+		window.replace.pushState({curso:"HTML5 Avanzado"},"","/cambiohistoria");
+		console.log(window.history.length);
+		window.onpopstate = function(e){
+			alert(e.state.curso);
+		}
+	</script>
+</body>
+</html>

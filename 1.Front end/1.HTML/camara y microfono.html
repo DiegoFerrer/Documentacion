@@ -1,0 +1,97 @@
+
+<video id="video" autoplay="">
+	
+</video>
+
+<script type="text/javascript">
+	// Permisos
+	let video = document.getElementById('video')
+	/* MediaTrackConstraints */
+		// Audio
+		/*  Propiedades
+		channelCount => {ideal:valor, exact:10}
+		latency
+		SampleRate
+		Volume	
+		*/
+	const contraints = {
+		audio: {
+			channelCount: {ideal:10, exact:10},
+			sampleRate: {},
+			Volume:{},
+			echoCancellation: // valor booleano para si cancer el eco del audio
+		}
+
+		video: {
+			aspecRatio: {},
+			width: {}, // ideal exacto o poner numero direcamente 1200 ej
+			height: {}, // 700 ej
+			frameRate: {ideal:10},
+			facingMode: 'enviroment', // se abrira la camara trasera con esa propiedad, la delantera seria "user"
+		}
+		// luego quedaria pasarle este JSON AL objeto getUserMedia(contraints)
+	}
+	navigator.mediaDevices.getUserMedia({video:true,audio:true})
+	/* metodo para acceder a los datos de la camara o microfono
+	recibe un objeto como argumeneto que devuelve una promesa
+	*/
+		.then(stream => {
+			video.srcObject = stream;
+		})
+		.catch(error => codigo) 
+	
+</script>
+
+<!-- 1Enlistar los dispositivos disponibles y enlazar con los datos requeridos -->
+
+<select id="camara-selector">
+	option
+</select>
+<video id="video" autoplay>
+	
+</video>
+
+<script>
+	let video = document.getElementById('video');
+	let selectTag = document.getElementById('camara-selector')
+
+	navigator.mediaDevices.enumerateDevices().then(devices => {
+		devices.forEach(devices => {
+			if (device.kind != 'videoinput') return
+			// kind devuelve el tipo de hard
+			let optionTag = document.createElement('option');
+			optionTag.innerHTML = device.label;
+
+			optionTag.value = device.deviceId;
+
+			selectTag.appendChild(optionTag)
+		})
+	})
+
+	selectTag.addEventListener('change' , function(ev){
+		let deviceId = this.options[this.selectedIndex].value;
+		// this hace referencia al select
+		// optiosn retorna array de todos los options
+		// selectedIndex, retorna el index del seleccionado
+		// solo necesitamos el value
+
+		start(deviceId)
+	})
+
+	function start (deviceId = undefined) {
+		const constraints = {
+			video: {
+				deviceId: deviceId
+			}
+		}
+
+
+
+		navigator.mediaDevices.getUserMedia(constraints)
+			.then(stream => {
+				video.srcObject = stream;
+			})
+			.catch(error => codigo) 		
+	}
+
+</script>

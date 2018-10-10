@@ -1,0 +1,53 @@
+<style type="text/css">
+	canvas {
+		border: solid;
+	}
+</style>
+
+<canvas id="canvas" width="800" height="600"></canvas>
+
+
+<script>
+	let canvas = document.getElementById('canvas');
+
+	let contexto = canvas.getContext('2d') // obtener el contexto de canvas
+
+	// Coordenadas
+	// La coordenada Y, lo positivo es hacia abajo y no hacia arriba en un plano
+
+	contexto.
+	// metodos para dibujar un rectangulo/cuadrado
+
+	fillRect(x,y,ancho,alto) // dibuja con relleno
+	strokeRect(x,y,ancho,alto) // dibuja solo el borde sin relleno
+	clearRect(x,y,ancho,alto) // borra todos los pixeles del area
+
+	// dibujar un circulo
+
+	contexto.beginPath();
+	contexto.arc(centroX,CentroY,radio,anguloInicial,AnguloFinal,true)
+	// coordenada centro x, y ,radio,angulo inicial,angulo final, sentido agujas del reloj
+	contexto.arc(200,200,80,0,Math.PI * 2)
+	contexto.closePath();
+	contexto.fill()
+
+	// ................Paths
+	/*  Definen la forma de un vector para dibujar lo que sea dentro de el */
+	// beginPath() | closePath() | moveTo() | lineTo() | arcTo() | arc()
+
+	contexto.beginPath() // se inicia un path
+
+	context.moveTo(200,200) // se crea una nueva linea
+	context.lineTo(400,300) // se traza una nueva linea desde las coordenadas anteriores
+	context.lineTo(280,350) // se traza una nueva linea desde las coordenadas anteriores
+
+	context.closePath() // se cierra el path
+
+	// manipular colores
+
+	contexto.strokeStyle = 'palabrasClaves como red' 'Hexadecimal' 'rgb/rgba'
+	contexto.fillStyle = 'palabrasClaves como red' 'Hexadecimal' 'rgb/rgba'
+	
+	
+
+</script>

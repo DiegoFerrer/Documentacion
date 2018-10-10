@@ -1,0 +1,55 @@
+
+<video id="video" src="" poster="urlImg" controls="" autoplay="">
+	<source src="" type="">
+</video>
+
+<button id="playButton">Reproducir</button>
+<button id="pauseButton">Pausar</button>
+
+<!-- atributos etiqueta video
+	src : donde esta el archivo | recomendable usar etiqueta
+	autoplay : para que se ponga play el video solo
+	loop : reinicia el video cuando este termina
+	controls: ofrece controles en el video 
+	muted: que este sin volumen el video
+	width: ancho del video
+	height: alto del video
+-->
+
+<script>
+	// Pausar y reproducir video por botones
+	let video = document.getElementById('video'),
+		playButton = document.getElementById('playButton'),
+		pauseButton = document.getElementById('pauseButton')
+
+	playButton.addEventListener('click', () => {
+		video.play()
+	})
+
+	pauseButton.addEventListener('click', () => {
+		video.pause()
+	})
+
+	// video.currentTime : para manipular el tiempo del video
+	// Ejemplo
+
+	atrasar.addEventListener('click' () =>{
+		video.currentTime -= 1;
+	})
+
+	adelantar.addEventListener('click' () =>{
+		video.currentTime += 1;
+	})
+
+	// video.duration : devuelve la duracion del video
+</script>
+
+<!-- Eventos de video en script -->
+<script>
+	video.addEventListener('play') // se ejecuta cuando empieza a reproducirse un video 
+	video.addEventListener('pause') // cuando se ha pausado
+	video.addEventListener('play') 
+	video.addEventListener('timeupdate') // se evalua constantemente mientras se este reproduciendo
+	video.addEventListener('progress') // se evalua mientras el navegador esta descargando el audio y el video
+</script>
+
