@@ -36,6 +36,7 @@ cross axis > eje vertical (arriba abajo)
 			flex-end : fin del eje
 			space-between : distribuye el espacio disponible entre los elementos
 			space-around : distribuye el espacio alrededor de los elementos
+			space-evenly : espacio entre adelante y los costados;
 			center : centro
 			margin auto : puedo hacer cosas increíbles;
 
@@ -64,7 +65,6 @@ cross axis > eje vertical (arriba abajo)
 		flex-shrink : factor de encogimiento 
 		flex : grow shrink basis | auto
 		White-space: nowrap , es una propiedad para los menú que se ajuste el texto automáticamente
-
 
 	}
 
