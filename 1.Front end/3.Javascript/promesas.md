@@ -2,7 +2,7 @@
 <!--                PROMESAS                 -->
 <script>
 /* 	Las promesas permiten ejecutar procesos de manera sincrona 
-	Soluciona al problema de legibilidad de los callbacks, asegurando que solo se ejecuta una parte
+	Soluciona al problema de legibilidad de los callbacks (hell), asegurando que solo se ejecuta una parte
 	de la promesa cuando se ejecuta el primer proceso, anidando con then
 */
 
@@ -39,6 +39,16 @@
       c('Fin Promise')
     })
     .catch( err => c(err) )
+
+// ---------------------------------------------------
+ids [1,2,3,4,5,6,7]
+var promesas =ids.map(id => obtenerPersonaje(id))
+Promise
+	.all(promesas)
+	.then(personajes => console.log(personajes))
+	.catch(onErr)
+
+
 
 // Promesas con Ajax
 	function getUserInfo(userName){
