@@ -19,11 +19,10 @@ Además de los pipes que Angular tiene por defecto, es posible que nosotros haga
 	date:fulldate (fecha completa)
 	date:shortime (la hora)
 	date:"dd-mm-yyyy"
-| number:
- -->
-<!-- 
+| number: number '1.2-2' (minimo 2 decimales y maximo 2)
+| json (convierte todos los objetos a json)
 
--->
+ -->
 
 <html>
 	<li>{{lugar.nombre | lowercase }}</li>	

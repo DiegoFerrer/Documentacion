@@ -8,6 +8,7 @@
 	https://github.com/angular/angularfire2/blob/master/docs/install-and-setup.md | GUIA DE INSTALACION CON ANGULAR
 
 
+	
 
  -->
 <!-- 

@@ -1,0 +1,26 @@
+
+<!--  
+	Por qué necesitamos seguridad en nuestras aplicaciones?
+Al no tener buena seguridad, se pierde confianza por parte de los usuarios
+Podemos poner información en riesgo
+Podemos arriesgar a nuestro propio sistema
+
+Qué son los JSON Web Tokens(JWT)?
+Son un estándar abierto (RFC 7519) que permite la transferencia segura entre dos partes
+No tiene dependencias externas
+Es un mecanismo compacto
+Pueden ser firmados con una llave secreta o par de pública/privada
+
+ -->
+<!-- 
+
+-->
+
+<html>
+	
+
+</html>
+
+<script>
+	
+</script>
