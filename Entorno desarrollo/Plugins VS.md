@@ -17,4 +17,6 @@
 	* Live sass compiler // compilar sass
 	* Angular languaje service //
 	* Angular snippets
+
+	    "editor.wordWrap": "on",
 </script>
