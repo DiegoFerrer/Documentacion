@@ -1,0 +1,1 @@
+1. Instalar los siguientes modulos : pip install flask flask-mysqldb
