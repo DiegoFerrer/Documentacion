@@ -1,20 +1,13 @@
-<script>
-	* Open in browser // para abrir los archivos rapido en navegador	
-	* live server  // para abrir un servidor y se refrescan los cambios
-	* bracket pair colorizer // Colorea el codigo de apertura y cierre
-	* vscode-icons // iconos
-	* AutoFileName // permite vincular archivos de proyecto
-	* Prettier // Ordenar codigo (Click derecho ,ordenar)
-	* Bookmarks // Para marcar una parte del codigo y no perderse (click derecho,marcar)
-	* Color highlight // Pone el color en css
-	* Babel // Sintaxi de ES6 En Adelante
-	* npm // Para correr script de npm	
-	* npm intellisense // Para las dependencias
-	* Code Runner // ejecutar codigo en la consola (click derecho,run code)
-	* Css Minify // Minificar css
-	* HTML Tag wrapper // Ctrl + i (Encerrar una etiqueta)
-	* Intellisense for css // para clases en el html
-	* Live sass compiler // compilar sass
-	* Angular languaje service //
-	* Angular snippets
-</script>
+esplegar en Heroku
+1. Descargar heroku cli
+2. heroku login
+3. instalar gunicorn desde la carpeta virtual | pip install gunicorn
+4. crear archivo Procfile en la carpeta src con lo siguiente:
+    web : gunicorn index:app
+5. crear archivo runtime.txt con lo siguiente
+    Python 3.7.2 # Poner la version que se usa en el proyecto
+6. desde la carpeta src ejecutar : pip freeze > requirements.txt
+7. desde src : heroku create nameProyecto
+8. enlazar con git : heroku git:remote nameProyect
+9. git push heroku master
+10. heroku open para compartir la web
