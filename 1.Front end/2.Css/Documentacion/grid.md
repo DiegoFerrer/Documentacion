@@ -5,13 +5,13 @@
 <style> 	
 	div {
 		display: grid;  || ni bien se le pone esta propiedad se genera un contexto
-		/* definir columnas y filas  */
+		/* definir columnas y filas  */ 
 		grid-template-columns:200px 300px 150px (3 columnas serian) 
 		grid-template-rows: 100px 300px 1fr (3 filas serian)  
-			repeat(numero de filas/columnas, fit-content[que se adapte al contenido] / auto / fr/ px)
+			repeat(numero de filas/columnas, fit-content[que se adapte al contenido] / auto / fr/ px)  
 			repeat(4, minmax(1em, 4em) esto es para indicar el minimo y máximo 
-		Para darle nombre a las líneas :
-		grid-template-columns: [name line] 200px [xxx] 1fr  -> las líneas se nombran entre corchetes
+		Para darle nombre a las líneas : 
+		grid-template-columns: [name line] 200px [xxx] 1fr  -> las líneas se nombran entre corchetes 
 		y después en el hijo se pone grid-column: y en ves de tamaño se pone name / name. 
 	}
  	

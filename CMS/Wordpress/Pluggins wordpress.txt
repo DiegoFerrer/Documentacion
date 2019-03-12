@@ -1,0 +1,5 @@
+child timify | para poner un tema como hijo
+contact form 7 | formularios de contacto
+siteOrigin | paginas adaptables
+wordfrence | seguridad
+Yoast SEO | seo

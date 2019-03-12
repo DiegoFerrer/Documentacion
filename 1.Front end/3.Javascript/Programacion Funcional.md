@@ -7,7 +7,8 @@
 
 	//					Caracteristicas funcionales
 	• Arquitecturas centradas en la transformacion
-	• Inmutabilidad
+	• Inmutabilidad (no cambia los datos si no que genera uno nuevo )
+	* Evita todo los iteradores comunes, ya que estos mutan los datos
 	• Compositividad
 	• Variantes Funcionales
 	• Transparencia referencial
