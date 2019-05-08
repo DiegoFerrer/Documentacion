@@ -2,7 +2,7 @@
 # modulos de python | https://docs.python.org/3/py-modindex.html
 # modulos propios
 
-
+import math # importa el modulo de math
 import datetime # importa toda la biblioteca de datetime
 from datetime import timedelta,date # importa los metodos de la libreria datetime
 

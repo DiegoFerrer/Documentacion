@@ -10,3 +10,13 @@ else:
 and 
 or
 not
+
+
+# TRY- EXCEPT
+# Cuando hay un error, un programa pueda continuar
+
+try:
+    # se intentara hacer esto
+    # Codigo
+except: Exception as e: # Pero si falla por alguna razon
+    # Codigo

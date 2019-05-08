@@ -11,3 +11,7 @@ def nameFuncion(name):
     print(f"Hola {name}")
 
 nameFuncion('Diego')
+
+# FUNCIONES LAMBDA
+
+suma = lambda a,b: a + b

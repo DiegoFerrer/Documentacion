@@ -11,7 +11,8 @@ print('caracter' in lista) # devuelve un boolean
 lista.append('elemento') # Agrega un elemento al final
 lista.extend('tupla o lista') # transforma una tupla o lista en individuales y los agrega al final
 lista.insert(1, 'elemento') # inserta un elemento en una posicion
-lista.pop() # elimina el ultimo elemento de la lista o se le puede pasar un indice y lo elimina
+lista.pop('i') # elimina el ultimo elemento de la lista o se le puede pasar un indice y lo elimina
+lista.index('elemento') # devuelve el index del elemento
 lista.remove('elemento') # elimina un elemento especifico de la lista
 lista.clear() # deja la lista vacia
 lista.sort() # Ordena la lista alfabeticamente
