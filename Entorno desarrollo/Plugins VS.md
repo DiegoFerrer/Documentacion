@@ -18,5 +18,5 @@
 	* Angular languaje service //
 	* Angular snippets
 
-	    "editor.wordWrap": "on",
+	 "editor.wordWrap": "on",
 </script>
