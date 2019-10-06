@@ -1,6 +1,6 @@
 <template>
 	<test mgs="Hola" />  <!-- Para pasar datos de un componente padre a hijo | en script debe recibirlo props--> 
-
+  -
     <h1>{{ msg }}</h1>
    	<h1>{{ user.firstName }}</h1>
    	<div v-html="myHtml"></div> <!-- directiva de vue para indicar html -->
@@ -9,8 +9,9 @@
    	<div v-else="title"></div> <!-- caso contrario, haz/pinta lo siguiente -->
    	<div v-for="task in task"></div>  <!-- recorrer un loop -->
    	<input type="text" v-model="title">  <!-- twoway data binding de la propiedad title-->
+	<div :class="{NameClass: expresionBoolean}"></div>  <!-- clase de estilo -->
    	<button v-on:click="saludar">
-   		click me
+   		click m
    	</button>
    	<form v-on:submit="addUser"></form>
    	<div>
