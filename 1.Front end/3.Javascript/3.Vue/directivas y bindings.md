@@ -8,6 +8,7 @@
    	<div v-if="showName"></div> <!-- si es esto, haz/pinta lo siguiente -->
    	<div v-else="title"></div> <!-- caso contrario, haz/pinta lo siguiente -->
    	<div v-for="task in task"></div>  <!-- recorrer un loop -->
+	<li><a v-bind:href="link.url"></a></li>  <!-- hace refencia al atributo utilizando un dato -->
    	<input type="text" v-model="title">  <!-- twoway data binding de la propiedad title-->
 	<div :class="{NameClass: expresionBoolean}"></div>  <!-- clase de estilo -->
    	<button v-on:click="saludar">
