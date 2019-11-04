@@ -30,7 +30,7 @@
                              ‘sidebar main main’ 	 para que sidebar ocupe una columa y main 2 columnas
                              ‘footer .’ 			 el punto es para declarar un área libre
 
-        /* esto según cauntas filas se haya declarado en el template grid
+        /* esto según cuantas filas se haya declarado en el template grid
         según la estructura declarada en el template área se alienean los elementos por ejemplo header esa primero y footer ultimo pero si pones al revés cambiaria */ 
 
         /* COMO FLEXBOOX CUENTA CON LAS SIGUIENTES PROPIEDADES */ 

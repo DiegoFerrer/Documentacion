@@ -41,7 +41,7 @@ cross axis > eje vertical (arriba abajo)
 			margin auto : puedo hacer cosas increíbles;
 
 		/* ALINEACION EJE SECUNDARIO */	
-		align-items /* cuando haya solo 1 linea de contenido */
+		align-items /* cuando haya solo 1 linea de contenido | es decir cuando esta en nowrap */ 
 		align-content /* cuando son varias líneas */
 			flex-start : por defecto,al inicio
 			flex-end: final
@@ -61,8 +61,8 @@ cross axis > eje vertical (arriba abajo)
 
 		/*  cajas flexibles */ 
 		flex-basis: main-size inicial
-		flex-grow: factor de crecimiento 0 y 1 (1 es para que crezca en el espacio disponible)
-		flex-shrink : factor de encogimiento 
+		flex-grow: factor de crecimiento 0 y 1 (1 es para que crezca en el espacio disponible) /* | se puede poner otro numero por ejemplo 4, es 4 veces el espacio disponible */
+		flex-shrink : factor de encogimiento  
 		flex : grow shrink basis | auto
 		White-space: nowrap , es una propiedad para los menú que se ajuste el texto automáticamente
 
