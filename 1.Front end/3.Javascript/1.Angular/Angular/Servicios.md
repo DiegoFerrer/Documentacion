@@ -6,6 +6,8 @@
 	# Pueden ser usados desde cualquier componente
 	# Hacen nuestro app mucho más mantanible
 
+	Se debe declarar tanto en el modulo (en providers ) como en el componente a usar (importando la clase del servicio)
+
  -->
 <!-- 
 	Crear ccarpeta Services

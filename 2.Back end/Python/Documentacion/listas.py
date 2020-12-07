@@ -9,7 +9,7 @@ dir(lista) # para ver todos los metodos
 print('caracter' in lista) # devuelve un boolean
 
 lista.append('elemento') # Agrega un elemento al final
-lista.extend('tupla o lista') # transforma una tupla o lista en individuales y los agrega al final
+lista.extend('tupla o lista') # transforma una tupla o lista en individuales y los agrega al final del array | esto es para agregar varios valores en vez de uno con apped
 lista.insert(1, 'elemento') # inserta un elemento en una posicion
 lista.pop('i') # elimina el ultimo elemento de la lista o se le puede pasar un indice y lo elimina
 lista.index('elemento') # devuelve el index del elemento

@@ -13,6 +13,8 @@
 	Pasar datos a un componente: INPUT
 	inportar en el componente que se quiere llamar el input de angular core
 
+	Los componentes deben ser declarados en el MODULO a utilizar
+
  -->
 
 <html>
