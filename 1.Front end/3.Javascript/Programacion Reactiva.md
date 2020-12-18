@@ -22,4 +22,5 @@ Observers (observadores)
 Se asocian al Subject y pueden ser invocados cuando se producen eventos (cambios)
 */ 
 
+
 </script>

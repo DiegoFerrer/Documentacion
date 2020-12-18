@@ -1,22 +1,20 @@
 <script>
-	* Open in browser // para abrir los archivos rapido en navegador	
-	* live server  // para abrir un servidor y se refrescan los cambios
-	* bracket pair colorizer // Colorea el codigo de apertura y cierre
-	* vscode-icons // iconos
-	* AutoFileName // permite vincular archivos de proyecto
-	* Prettier // Ordenar codigo (Click derecho ,ordenar)
-	* Bookmarks // Para marcar una parte del codigo y no perderse (click derecho,marcar)
-	* Color highlight // Pone el color en css
-	* Babel // Sintaxi de ES6 En Adelante
-	* npm // Para correr script de npm	
-	* npm intellisense // Para las dependencias
-	* Code Runner // ejecutar codigo en la consola (click derecho,run code)
-	* Css Minify // Minificar css
-	* HTML Tag wrapper // Ctrl + i (Encerrar una etiqueta)
-	* Intellisense for css // para clases en el html
-	* Live sass compiler // compilar sass
-	* Angular languaje service //
-	* Angular snippets
+* Live Share // trabajar en TIEMPO REAL con alguien
+* Prettier // Ordenar codigo (Click derecho ,ordenar)
+* editorconfig // para que todos los programador del proyectos tengan las mismas configuraciones
+* eslint // linter para JS
+* indent-rainbow // colores a indentacion, ayuda si el proyecto es grande
+* live server  // para abrir un servidor y se refrescan los cambios
+* vscode-icons // iconos
+* Color highlight // Pone el color en css
+* HTML Tag wrapper // Ctrl + i (Encerrar una etiqueta)
+* rainbow brackets // colorea los brackets
+* babel // te resalta mejor palabras reservadas de ES6
+* one dark pro // theme
+* css peek // click derecho -> go to definition. Sobre un HTML te lleva al CSS
+* auto-rename-tag // para autorenombrar etiquetas HTML con solo nombrar una
+* Better Comments // mejores colores para los comentarios
 
-	 "editor.wordWrap": "on",
+
+"editor.wordWrap": "on",
 </script>

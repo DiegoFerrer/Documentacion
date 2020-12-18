@@ -57,8 +57,8 @@ def update_contact(id):
       phone = request.form['phone']
       email = request.form['email'] 
       cur = mysql.connection.cursor()
-      cur.execute('UPDATE contacts SET fullname = %s, email = %s, phone = %s WHERE id = %s',(fullname,email,phone,id))
-      # cur.execute(f'UPDATE contacts SET fullname = {fullname}, phone = {phone}, email = {email} WHERE id = {id}')
+      # cur.execute('UPDATE contacts SET fullname = %s, email = %s, phone = %s WHERE id = %s',(fullname,email,phone,id))
+      cur.execute(f'UPDATE contacts SET fullname = {fullname}, phone = {phone}, email = {email} WHERE id = {id}')
       mysql.connection.commit() # ejecutar la consulta
     return redirect(url_for('index')) # redirecciona a la ruta index
 
