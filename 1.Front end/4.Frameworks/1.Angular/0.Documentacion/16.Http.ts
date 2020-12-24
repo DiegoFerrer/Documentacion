@@ -10,59 +10,49 @@
 import {HttpClientModule} from '@angular/common/http'
 
 
-// ????????????????????? servicio
+//?------------- servicio
 
 import {HttpClient} from '@angular/common/http'
 import {Observable} from 'rxjs'
 import {catchError,throwError} from 'rxjs/operators'
 
-constructor(private http:HttpClient)
+export class nameService {
+	constructor(private http:HttpClient){}
 
-getDatos(): Observable<tipo> {
-	return this.http.get<tipo>('url o archivoJson')
-	.pipe(
-		catchError(this.manejarError)
-	)
-}
-
-manejarError(error:HttpErrorResponse){
-	if(error.error instanceof ErrorEvent){
-		// Error del cliente
-		console.log('error del cliente', error.error.message)
-	} else{
-		// Error de servidor
-		console.log('status', error.status)
+	getDatos(): Observable<tipo> {
+		return this.http.get<tipo>('url o archivoJson')
+		.pipe(
+			catchError(this.manejarError)
+		)
 	}
-	return throwError('hubo un problema') // capturar y relanzar.
-}
-
-// Para manejar errores se deferia definir en el servicio una funcion para manejarlo
-private manejarError(error: HttpErrorResponse){
-	if (error.error instanceof ErrorEvent){ // error del lado del cliente
-		console.error('Ocurrio un error:', error.error.message)
-	} else { // error del lado del servidor
-		console.error(error.status, error.error)
+	
+	// Funcion para procesar errores de peticiones |se usa con la fn pipe para llamarla
+	private manejarError(error:HttpErrorResponse){
+		if(error.error instanceof ErrorEvent){
+			// Error del cliente
+			console.log('error del cliente', error.error.message)
+		} else{
+			// Error de servidor
+			console.log('status', error.status)
+		}
+		return throwError('hubo un problema') // capturar y relanzar.
 	}
-	return throwError( // retorna el error como observable
-		'Error inesperado')
-
+	
 }
 
-// -----------------------------------------------
-
-// componenente | primer paso inyecta el servicio y luego utiliza el metodo
-ngOnInit(){
-	this.Servicio.getDatos()
-	.suscribe( (data:tipo) => this.variable = data)
-	.pipe(
-		catchError(error =>{
-			this.mensajeError = error
-			// return of ([]); // capturar y remplazar
-			return EMPTY // capturar y remplazar, sin remplazar nada
-		})
-	)
+//! ------- componenente | primer paso inyecta el servicio y luego utiliza el metodo
+export class nameComponent {
+	ngOnInit(){
+		this.Servicio.getDatos()
+		.pipe(
+			catchError(error => {
+				//* puedo poner algo en el template aca
+				// return of ([]); // capturar y remplazar
+				return EMPTY; // capturar y remplazar, sin remplazar nada
+			})
+		)
+		.suscribe((data:tipo) => this.variable = data)		
+	}	
 }
-
-mensajeError:string;
 
 

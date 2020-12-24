@@ -20,6 +20,7 @@ bool("algo") # devuelve true o false
 "Strings" 'Strings' 
 30 # Numeros enteros (int)
 30.5 # Numeros flotantes (float)
+2j # numeros complejos (complex)
 True # Boolean
 False # Boolean
 

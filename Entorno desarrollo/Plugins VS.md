@@ -14,7 +14,8 @@
 * css peek // click derecho -> go to definition. Sobre un HTML te lleva al CSS
 * auto-rename-tag // para autorenombrar etiquetas HTML con solo nombrar una
 * Better Comments // mejores colores para los comentarios
-
+* python //
+* sqlite //
 
 "editor.wordWrap": "on",
 </script>

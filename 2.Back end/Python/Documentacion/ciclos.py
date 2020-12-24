@@ -8,10 +8,18 @@ for comida in comidas:
         continue
     
 # Ciclo while
-contador = 4
-while contador <=10:
-    print('algo')
-    contador += 1
+while True:
+    contador = 0
+    if contador < 100:
+        contador += 1
+    else:
+        break
+
+nombre = input('ingresar nombre'
+while nombre != 'Jose':
+    print('ingresaste mal el nombre')
+    nombre = input('ingresar nombre'
+
 
 # For in range (es un ciclo definido entre 2 intervalos incluyendolos)
 for variable in range(2,9):

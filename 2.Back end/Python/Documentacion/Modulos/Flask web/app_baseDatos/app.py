@@ -37,7 +37,8 @@ def add_contact():
         phone = request.form['phone']
         email = request.form['email']
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO contacts (fullname,phone,email) VALUES(%s, %s, %s)', (fullname,phone,email)) # cursor es para crear la consulta, insert es de insertar, contacts es el nombre de la tabla | values con %s es que se lo pasamos a continuacion como una tupla
+        # cur.execute('INSERT INTO contacts (fullname,phone,email) VALUES(%s, %s, %s)', (fullname,phone,email)) # cursor es para crear la consulta, insert es de insertar, contacts es el nombre de la tabla | values con %s es que se lo pasamos a continuacion como una tupla
+        cur.execute(f'INSERT INTO contacts SET fullname = {fullname}, phone = {phone}, email = {email}')
         mysql.connection.commit() # ejecutar la consulta
         return redirect(url_for('index')) # redirecciona a la ruta index
 
