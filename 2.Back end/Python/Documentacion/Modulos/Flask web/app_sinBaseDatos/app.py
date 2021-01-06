@@ -19,6 +19,7 @@ from products import products
 def getProducts(): # en este caso va a usar el archivo products.py, pero seria como pedir a la base de datos
     return jsonify({"products": products, "message": "Products-list"}) # esto te devuelve la lista y ya puede ser consumida por el front end
 
+# Obtener producto unico
 @app.route('/products/<string:product_name>') # podria usarse ID para identificar un unico producto | en estec caso uso el nombre
 def getProduct(product_name):
     print(product_name) # imprime en consola del servidor

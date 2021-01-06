@@ -1,4 +1,0 @@
- ingresar a {{ https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient }} 
-y descargar la version {{ mysqlclient ultima version }}
- e instalarlo por medio de consola 
-despues si puedes instalar el modulo de flask-mysqldb

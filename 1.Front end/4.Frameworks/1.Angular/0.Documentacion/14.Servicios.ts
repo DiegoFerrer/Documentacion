@@ -8,8 +8,13 @@
 	Se debe declarar tanto en el modulo (en providers ) como en el componente a usar (importando la clase del servicio)
 
 
+
 	Crear ccarpeta Services
 */
+
+	// app module
+	import { HttpClientModule } from '@angular/common/http';
+
 	// WEATHER SERVICES.TS
 	import {Injectable} from '@angular/core';
 	import {HttpClient} from '@angular/common/http';

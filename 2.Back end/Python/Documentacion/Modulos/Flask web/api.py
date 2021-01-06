@@ -1,4 +1,8 @@
-# pip install flask  flask-mysqldb 
+
+#? ------------------------------ I N S T A L A C I O N E S ---------------------------
+    # pip install flask  
+    # pip install flask-mysqldb 
+    # pip install -U flask-cors
 
 '''------------------------------------ I M P O R T S --------------------------------'''
 from flask import Flask 
@@ -6,6 +10,8 @@ from flask import render_template   # para usar html
 from flask import request           # Para enviar y recibir datos
 from flask import redirect          # Para redireccionar
 from flask import url_for           # crear una URL para redireccionar
+from flask import jsonify           # Objeto Json
+from flask import request           # manejar los request
 from flask_cors import CORS         # Importando CORS para python
 from flask_mysqldb import MySQL
 
@@ -23,50 +29,44 @@ mysql = MySQL(app)
 app.secret_key = 'mysecretkey' # para que vaya protegida la sesion
 
 '''----------------------------------------- R U T A S --------------------------------'''
-# Obtener todos los datos de la columna contacts
-@app.route('/')
+
+#! Obtener todos los datos de la columna series
+@app.route('/', methods=['GET'])
 def index():
     cur = mysql.connection.cursor()
-    cur.execute('SELECT * FROM contacts') 
+    cur.execute('SELECT * FROM series') 
+    status_code = 200
     data = cur.fetchall() # ejecuta la consulta y obtiene todos los datos
-    return render_template('index.html', contacts = data),201
+    return jsonify(data), status_code
 
-# Crear contacto
-@app.route('/add_contact', methods=['POST'])
-def add_contact():
+#! Crear serie
+@app.route('/agregarSerie', methods=['POST'])
+def agregarSerie():
     if request.method == 'POST':
-        fullname = request.form['fullname']
-        phone = request.form['phone']
-        email = request.form['email']
+        nombre = request.form['nombre']
+        valoracion = request.form['valoracion']
+        temporada = request.form['temporada']
         cur = mysql.connection.cursor()
         # cur.execute('INSERT INTO contacts (fullname,phone,email) VALUES(%s, %s, %s)', (fullname,phone,email)) # cursor es para crear la consulta, insert es de insertar, contacts es el nombre de la tabla | values con %s es que se lo pasamos a continuacion como una tupla
-        cur.execute(f'INSERT INTO contacts SET fullname = {fullname}, phone = {phone}, email = {email}')
+        cur.execute(f'INSERT INTO series SET nombre = {nombre}, valoracion = {valoracion}, temporada = {temporada}')
+        mysql.connection.commit() # ejecutar la consulta
+        status_code = 201
+        return redirect(url_for('/')),status_code # redirecciona a la ruta index
+
+#! Actualizar serie
+@app.route('/update/<id>', methods=['POST'])
+def update_serie(id):
+    if request.method == 'PUT':
+        nombre = request.form['nombre']
+        valoracion = request.form['valoracion']
+        temporada = request.form['temporada']
+        cur = mysql.connection.cursor()
+      # cur.execute('UPDATE contacts SET fullname = %s, email = %s, phone = %s WHERE id = %s',(fullname,email,phone,id))
+        cur.execute(f'UPDATE contacts SET nombre = {nombre}, valoracion = {valoracion}, temporada = {temporada} WHERE id = {id}')
         mysql.connection.commit() # ejecutar la consulta
         return redirect(url_for('index')) # redirecciona a la ruta index
 
-# Obtener contacto PARA EDITAR
-@app.route('/edit/<id>')
-def get_contact(id):
-     cur = mysql.connection.cursor()
-     cur.execute(f'SELECT * FROM contacts WHERE id = {id}')
-     data = cur.fetchall()
-     return render_template('edit.html', contact = data[0]) # en este caso obtengo ese contacto a editar y lo trabajo en otra vista
-
-# Enviar dato Editado
-@app.route('/update/<id>', methods=['POST'])
-def update_contact(id):
-    if request.method == 'POST':
-      fullname = request.form['fullname']
-      phone = request.form['phone']
-      email = request.form['email'] 
-      cur = mysql.connection.cursor()
-      # cur.execute('UPDATE contacts SET fullname = %s, email = %s, phone = %s WHERE id = %s',(fullname,email,phone,id))
-      cur.execute(f'UPDATE contacts SET fullname = {fullname}, phone = {phone}, email = {email} WHERE id = {id}')
-      mysql.connection.commit() # ejecutar la consulta
-    return redirect(url_for('index')) # redirecciona a la ruta index
-
-
-# Eliminar contactos
+#! Eliminar Serie
 @app.route('/delete/<string:id>')
 def delete_contact(id):
     cur = mysql.connection.cursor()
@@ -77,4 +77,4 @@ def delete_contact(id):
 '''############################### Ejecutar Servidor #########################'''
 # python app.py
 if __name__ == '__main__':
-    app.run(port = 3000, debug=True) # debug true para reiniciar cambios automaticamente
+    app.run(port = 4000, debug=True) # debug true para reiniciar cambios automaticamente

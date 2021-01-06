@@ -1,7 +1,11 @@
-export interface Name {
-	"user": 'string'
-	"id": number
+export interface Serie {
+    id: String,
+    nombre: String,
+    valoracion: String,
+    temporadas: String,
+    urlImg: String,
 }
 
+
 // en la app: importar interface
-<Name>[] // arreglo de tipo name
+Variable:Serie[] // arreglo de tipo name

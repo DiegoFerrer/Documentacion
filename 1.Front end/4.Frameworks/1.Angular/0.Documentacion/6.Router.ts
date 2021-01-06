@@ -16,7 +16,7 @@
 
 { 
 	path : '/'
-	redirecTo: Component
+	redirecTo: 'path'
 	pathMatch: 'full'
 }
 {
