@@ -12,8 +12,7 @@
 */
 
 /* 
-Una solucion a dia de hoy de la programacion reactive, es ReactiveX
-Es una API para el manejo de eventos asincronos utilizando observables
+?Una solucion a dia de hoy de la programacion reactive, es ReactiveX Es una API para el manejo de eventos asincronos utilizando observables
 
 RxJS(es la libreria para javascript de ReactiveX)
 Provee funciones para la creacion y el manejo de observables.

@@ -3,12 +3,7 @@
 
 <script>
 	/*
-	//					Caracteristicas funcionales
-	• Puntos de extension polimorfica
-	• Sustitutividad Liskoviana
-	• Arquitecturas dirigidas por flujos de control
-	• Arquitecturas centradas en la abstracciones
-	• Encapsulacion de estado
+
 
 	•	Indica el como: describe un problema en términos de instrucciones y 		condiciones para llegar a un resultado. Por ejemplo: necesito esta 			condicional, estos valores, etc.
 	•	Modifica el estado de un programa al permitir la mutación de valores

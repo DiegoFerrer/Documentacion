@@ -12,6 +12,7 @@ Para anotar nuestro módulos y además -> src/app/app.module.ts
 
 Componentes.
 
+
 ---------------------------------------------------------------------------------------------------------
 
 @NgModule

@@ -16,9 +16,16 @@ ________________________________________________________________________________
 ------------------------ Ciclo de vida de un componente | LifeCycle Hooks -------------------
 	
 
-	Crear , renderizar, comprobar, destuir.
+	Crear(constructor) , renderizar(ngOnInit), changes, destuir.
 	
-	NgOnChange,NgOnInit, NgAfterViewInit,NgDoCheck,NgOnDestroy
+	? NgOnChange
+	? NgOnInit
+	? NgDoCheck
+		* NgAfterViewInit
+		* NgAfterContentChecked
+		* ngAfterViewInit
+		* ngAfterVieChecked
+	? NgOnDestroy
 
 ---------------------------------------------------------------------------------------------
 */

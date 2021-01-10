@@ -102,6 +102,18 @@
 
 	? Buenas practicas para armar una API
 		
+	responder las peticiones con una estructura modelo 
 
+	class/interface/model/etc {
+		mensajeOk {
+			"codigo: string"
+			"contenido string"
+		} json,
+		mensajeError {
+			codigo
+			contenido
+		}
+		data {}
+	}
 
 -->
