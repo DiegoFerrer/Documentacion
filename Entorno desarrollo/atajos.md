@@ -1,8 +1,38 @@
 <!-- 
 
-? Mover lineas
-    alt + flechas
+#####################  Englobar codigo ######################
+? 1. Ir a file, preferencias, atajos de teclado
+? 2. ctrl + g
+
+#####################  Lineas ###############################
+
 ! Seleccionar linea actual
     ctrl + L
+* Seleccionar de a palabras
+    ctrl + mayus + flecha 
+? Mover lineas
+    alt + flechas
+
+todo, CLONAR LINEA
+    shift + alt + flecha 
+todo, MULTI CURSOR 
+    ctrl + shift + alt + flecha
+
+#############################################################
+##################### Comentarios ###########################
+
+* Toggle coment Linea
+    ctrl + /
+? Comentario seleccionado
+    shift + alt + A
+! Seleccionar palabras iguales 
+    ctrl + shift + L
+#############################################################
+########################### Otros ###########################
+
+! DESHACER
+    ctrl + z 
+* REHACER
+    ctrl + shift + z
 
 -->

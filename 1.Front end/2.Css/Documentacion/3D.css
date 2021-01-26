@@ -1,0 +1,12 @@
+/* 						3D                */
+
+div {
+	perspective: 100px; /* mientras más pequeño es el valor ,más cerca estoy del elemento */
+	perspective-origin: left center; /* donde estas parado, por defecto es center center ,se puede poner porcentajes */
+	transform-style: preserve-3d; /* permite que los hijos del elemento sigan manteniendo la transformación del padre. */
+	backface-visibility: /* no se ve el otro lado del elemento al rotarlo (la espalda)
+			visible
+			hidden */
+}
+
+
