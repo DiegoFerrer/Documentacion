@@ -6,6 +6,7 @@
 * indent-rainbow // colores a indentacion, ayuda si el proyecto es grande
 * live server  // para abrir un servidor y se refrescan los cambios
 * vscode-icons // iconos
+* Material Icon Theme // iconos material
 * Color highlight // Pone el color en css
 * HTML Tag wrapper // Ctrl + i (Encerrar una etiqueta)
 * rainbow brackets // colorea los brackets

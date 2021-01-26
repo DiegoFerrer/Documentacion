@@ -21,6 +21,8 @@ todo, MULTI CURSOR
 #############################################################
 ##################### Comentarios ###########################
 
+
+
 * Toggle coment Linea
     ctrl + /
 ? Comentario seleccionado
@@ -34,5 +36,18 @@ todo, MULTI CURSOR
     ctrl + z 
 * REHACER
     ctrl + shift + z
+? VER E IR A LAS DEFINICIONES
+    ctrl + shift + o
 
+TODO ############################################################## SNIPPETS ########################################################
+
+1. File, preferencias, user snippets
+
+	"Console log": {
+		"prefix": "ccc",
+		"body": [
+			"console.log(${1:});"
+		],
+		"description": "Esto sirve para mostrar un console.log"
+	}
 -->
