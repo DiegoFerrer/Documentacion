@@ -1,0 +1,15 @@
+/* 
+Los márgenes Top y bottom de los bloques a veces están combinados (colapsados) en un solo margen cuyo tamaño es el mayor de los márgenes combinados, un comportamiento conocido como colapso de margen. Ten en cuenta que los márgenes de flotantes y elementos con posición absoluta nunca colapsan. 
+
+El colapso de margen ocurre en tres casos básicos:
+
+? Hermanos adjacentes
+Los márgenes de los hermanos adjacentes son colapsados (excepto cuando el último hermano necesita ser limpiado después de usar los flotantes).
+
+? Padre y primer/último hijo
+Si no hay un borde, padding, contenido en línea, block formatting context creado, o un limpiado para separar el margin-top de un bloque del margin-top de su primer bloque hijo; o no hay borde, padding, contenido en línea, height, min-height, o max-height para separar el margin-bottom de un bloque del margin-bottom de su último hijo, entonces esos márgenes colapsan. El margen colapsado termina fuera del padre.
+Bloques vacíos
+
+? Si no hay borde, padding, contenido en línea, height, o min-height para separar el margin-top de un bloque de su margin-bottom, entonces sus márgenes superiores e inferiores colapsan.
+
+*/
