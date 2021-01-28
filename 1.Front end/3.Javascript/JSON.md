@@ -8,9 +8,6 @@
 	JSON.stringify() // Convierte un valor a cadena de notacion JSO
 
 
-
-
-
 //----------------------------LOADER Y TRABAJAR CON DATA-----------------------
 
 </script>

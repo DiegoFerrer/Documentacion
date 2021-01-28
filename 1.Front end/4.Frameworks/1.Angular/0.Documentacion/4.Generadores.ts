@@ -9,5 +9,7 @@
 	ng g c blabla
 
 	 ng generate interface shared/model/nameInterface
+
+	  --skipTests=true corresponde a la exclusión de los ficheros de los tests que no vamos a necesitar en este caso.
 */
 

@@ -7,13 +7,15 @@
 * ¿Quien cambio unavariable? 
 
 # Toda la data de la app se encuentra en una estructura previamente definida
-# Toda la informacion se encontrara almacenada en unico lugar llamado 
+
 ? STORE
-# El store JAMAS se modifica de forma directa
-# Cualquier interaccion del usuasrio dispara acciones que describen que sucedio
-# El valor actual de la informacion de la app se llama estado - 
+    # Toda la informacion se encontrara almacenada en unico lugar llamado 
+    # Es como una base de datos del lado del cliente
+    # El store JAMAS se modifica de forma directa
+    # Cualquier interaccion del usuasrio dispara acciones que describen que sucedio
+    # El valor actual de la informacion de la app se llama estado - 
 ? STATE
-# Un nuevo estado es creado a base de la combinacion del viejo estado y una accion por una funcion llamada 
+    # Un nuevo estado es creado a base de la combinacion del viejo estado y una accion por una funcion llamada 
 ? REDUCER
 
 -------------------------------------------
@@ -24,6 +26,7 @@
         ! type -> Completar tarea
         ! payload -> Es la menor cantidad de informacion para realizar la tarea (es opcional)
 * REDUCER
+    # Consulta el store
     Es una simple funcion que recibe 2 argumentos y siempre retorna un estado
         ? oldState = estado actual de la app (Ejemplo un objeto con tareas,etc)
         ? action = alguna tarea a realizada

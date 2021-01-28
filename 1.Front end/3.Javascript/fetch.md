@@ -4,16 +4,6 @@
 	Es una manera moderna de reemplazar el XMLHttpRequest
 
    -->
-
-<!DOCTYPE html>
-<html>
-<body>
-
-</body>
-</html>
-
-
-
 <script>
 	const cargarData = async () => {
 		const response = await fetch(url)
