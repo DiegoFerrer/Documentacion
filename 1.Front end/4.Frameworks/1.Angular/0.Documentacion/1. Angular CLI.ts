@@ -22,11 +22,7 @@
 		--dry-run		| Te mostraria que archivos crearia el proyecto (no lo crea)
 		npm install --save
 		ng lint| verifica que se sigan las reglas del archivo tslint, para que no haya errores
-		
-	******************************* CREAR SERVICIOS RESTful *******************************	 
-		npm install -g json-server
-		crear un archivo db.json
-		json-server db.json | en consola
+		 
 
  */
 
