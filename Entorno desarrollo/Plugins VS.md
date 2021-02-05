@@ -3,7 +3,6 @@
 * Prettier // Ordenar codigo (Click derecho ,ordenar)
 * editorconfig // para que todos los programador del proyectos tengan las mismas configuraciones
 * eslint // linter para JS
-* indent-rainbow // colores a indentacion, ayuda si el proyecto es grande
 * live server  // para abrir un servidor y se refrescan los cambios
 * vscode-icons // iconos
 * Material Icon Theme // iconos material
