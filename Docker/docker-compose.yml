@@ -1,0 +1,24 @@
+version: "3" # version docker compose
+
+services:
+  web:
+    # recibe el contexto de dockerfile
+    build: .
+    image: image-docker:1.0
+    ports:
+      - 5000:5000
+    environment:
+      MSG: ${MSG_CONTENEDOR} 
+    volumes: # con un . le digo que copie todo lo que esta en la carpeta de trabajo y le digo que lo copie todo a /app
+      - .:/app
+  db:
+    image: postgress 
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASS} # referencia a la variable del archivo .env
+    volumes:
+      # hace referencia al volumen creado en este caso data y le asigna la url que en este caso es donde postgress guarda sus datos, para que haga una copia
+      - data:/var/lib/postgresql/data 
+volumes:
+  data:
+    driver: local

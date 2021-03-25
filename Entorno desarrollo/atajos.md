@@ -15,12 +15,12 @@
 
 todo, CLONAR LINEA
     shift + alt + flecha 
+
 todo, MULTI CURSOR 
     ctrl + shift + alt + flecha
 
 #############################################################
 ##################### Comentarios ###########################
-
 
 
 * Toggle coment Linea
@@ -49,5 +49,15 @@ TODO ############################################################## SNIPPETS ###
 			"console.log(${1:});"
 		],
 		"description": "Esto sirve para mostrar un console.log"
+	},
+	"ngif": {
+		"prefix": "ngif",
+		"body": ["*ngIf=\"$1\""],
+		"description": "Crea ngIf"
+	},
+	"ngfor": {
+		"prefix": "ngfor",
+		"body": ["*ngFor=\"let item of list$1\""],
+		"description": "Crea ngFor"
 	}
 -->

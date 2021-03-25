@@ -3,8 +3,6 @@
 * Prettier // Ordenar codigo (Click derecho ,ordenar)
 * editorconfig // para que todos los programador del proyectos tengan las mismas configuraciones
 * eslint // linter para JS
-* live server  // para abrir un servidor y se refrescan los cambios
-* vscode-icons // iconos
 * Material Icon Theme // iconos material
 * Color highlight // Pone el color en css
 * HTML Tag wrapper // Ctrl + i (Encerrar una etiqueta)
@@ -16,6 +14,50 @@
 * Better Comments // mejores colores para los comentarios
 * python //
 * sqlite //
+* activitus bar // pasar la barra vs code vertical a horizontal
+* auto close tag // cerrar etiquetas automaticamente
+* Angular Essentials
+* Angular Language Service
+* docker
+* npm, npm intellisense
+* peacock
+* prettier
 
 "editor.wordWrap": "on",
 </script>
+
+<script>
+//-                              SNIPPETS 
+
+1. File, preferencias, user snippets
+
+HTML
+	"ngif": {
+		"prefix": "ngif",
+		"body": ["*ngIf=\"$1\""],
+		"description": "Crea ngIf"
+	},
+	"ngfor": {
+		"prefix": "ngfor",
+		"body": ["*ngFor=\"let item of list$1\""],
+		"description": "Crea ngFor"
+	}
+
+JAVASCIRPT Y TYPESCRIPT
+	"Console log": {
+		"prefix": "ccc",
+		"body": [
+			"console.log(${1:});"
+		],
+		"description": "Esto sirve para mostrar un console.log"
+	},
+	"backticks": {
+		"prefix": "pp",
+		"body": [
+			"`${1:}`"
+		],
+		"description": "Esto sirve para mostrar un console.log"
+	}
+
+
+<script>

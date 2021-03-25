@@ -37,6 +37,6 @@
 		# ahora puedo trabajar en otra rama 
 		! al terminar con la otra tarea, volver a la rama y traer la rama de la memoria
 		# git stash list | para ver si tengo algo en stash
-		* git pop | parado desde la rama incompleta
+		* git stash pop | parado desde la rama incompleta
 
 -->
